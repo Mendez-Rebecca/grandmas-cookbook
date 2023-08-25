@@ -27,10 +27,7 @@ const recipeSchema = new Schema({
     recipeName: { type: String, required: true},
     ratings: [ratingsSchema],
     ingredients: [{ type: String }],
-    measurements: {
-        units: ['tsp(s)', 'tbsp(s)', 'cup(s)', 'fl oz', 'pint(s)', 'gallon(s)',
-        'quart(s)', 'lb(s)', 'mL', 'L', 'gram(s)', 'kg']
-    },
+    measurements: String,
     recipeImg: String,
     instructions: String
 });

@@ -5,7 +5,7 @@
     <input type="text" name="recipeName">
     <label>Add Ingredients: </label>
     <input type="text" name="ingredients">
-    <select name="measurements"></select>
+    <select name="measurements">
         <option value="tsp(s)">tsp(s)</option>
         <option value="tbsp(s)">tbsp(s)</option>
         <option value="cup(s)">cup(s)</option>
@@ -18,9 +18,9 @@
         <option value="L">L</option>
         <option value="gram(s)">gram(s)</option>
         <option value="kg">kg</option>
-    <button type="button">Add More Ingredients</button>
-    <label>Upload an Image: </label>
-    <input type="file" name="recipeImg" accept="image/png, image/jpeg, image/jpg">
+    </select>
+    <label>Input Image URL: </label>
+    <input type="text" name="recipeImg">
 </form>
 
 <%- include('../partials/footer') %>
