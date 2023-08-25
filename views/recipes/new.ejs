@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/recipes" method="POST">
+    <label>Recipe Name: </label>
+    <input type="text" name="recipeName">
+    <label>Add Ingredients: </label>
+    <input type="text" name="ingredients">
+    <select name="measurements"></select>
+        <option value="tsp(s)">tsp(s)</option>
+        <option value="tbsp(s)">tbsp(s)</option>
+        <option value="cup(s)">cup(s)</option>
+        <option value="fl oz">fl oz</option>
+        <option value="pint(s)">pint(s)</option>
+        <option value="gallon(s)">gallon(s)</option>
+        <option value="quart(s)">quart(s)</option>
+        <option value="lb(s)">lb(s)</option>
+        <option value="mL">mL</option>
+        <option value="L">L</option>
+        <option value="gram(s)">gram(s)</option>
+        <option value="kg">kg</option>
+    <button type="button">Add More Ingredients</button>
+    <label>Upload an Image: </label>
+    <input type="file" name="recipeImg" accept="image/png, image/jpeg, image/jpg">
+</form>
+
+<%- include('../partials/footer') %>

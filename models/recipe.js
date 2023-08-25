@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ratingsSchema = new Schema({
-    recipeName: String,
+    content: {
+        type: String,
+        required: true
+    },
     rating: {
         type: Number,
         min: 1,
@@ -23,8 +26,13 @@ const ratingsSchema = new Schema({
 const recipeSchema = new Schema({
     recipeName: { type: String, required: true},
     ratings: [ratingsSchema],
-    ingredients: [String],
-    recipeImg: String
+    ingredients: [{ type: String }],
+    measurements: {
+        units: ['tsp(s)', 'tbsp(s)', 'cup(s)', 'fl oz', 'pint(s)', 'gallon(s)',
+        'quart(s)', 'lb(s)', 'mL', 'L', 'gram(s)', 'kg']
+    },
+    recipeImg: String,
+    instructions: String
 });
 
 module.exports = mongoose.model('Recipe', recipeSchema);
