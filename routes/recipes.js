@@ -3,7 +3,6 @@ const router = express.Router();
 
 const recipesCtrl = require('../controllers/recipes');
 
-/* GET users listing. */
 router.get('/', recipesCtrl.index);
 
 
