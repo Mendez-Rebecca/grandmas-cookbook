@@ -23,7 +23,8 @@ const ratingsSchema = new Schema({
 const recipeSchema = new Schema({
     recipeName: { type: String, required: true},
     ratings: [ratingsSchema],
-    ingredients: [String]
+    ingredients: [String],
+    recipeImg: String
 });
 
 module.exports = mongoose.model('Recipe', recipeSchema);
