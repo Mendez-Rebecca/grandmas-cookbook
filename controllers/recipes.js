@@ -3,7 +3,8 @@ const Recipe = require('../models/recipe');
 module.exports = {
     index,
     show,
-    new: newRecipe
+    new: newRecipe,
+    create
 }
 
 async function index(req, res) {
@@ -18,4 +19,14 @@ async function show(req, res) {
 
 function newRecipe(req, res) {
     res.render('recipes/new', { title: 'Add New Recipe'});
+}
+
+async function create(req, res) {
+    try {
+        const recipe = await Recipe.create(req.body);
+        res.redirect(`/recipes/${recipe._id}`);
+    } catch(err) {
+        console.log(err);
+        res.render('recipes/new', { errorMsg: err.message});
+    }
 }

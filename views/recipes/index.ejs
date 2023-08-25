@@ -1,3 +1,15 @@
 <%- include('../partials/header') %>
 
+<div>
+    <% recipes.forEach(function(r) { %>
+        <%= r.recipeName %>
+        <%= r.ingredients %>
+        <%= r.measurementQty %>
+        <%= r.measurements %>
+        <%= r.recipeImg %>
+        <%= r.instructions %>
+
+    <% }); %>
+</div>
+
 <%- include('../partials/footer') %>
