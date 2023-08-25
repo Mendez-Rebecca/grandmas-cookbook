@@ -3,24 +3,68 @@
 <form id="new-form" action="/recipes" method="POST">
     <label>Recipe Name: </label>
     <input type="text" name="recipeName">
-    <label>Add Ingredients: </label>
-    <input type="text" name="ingredients">
-    <select name="measurements">
-        <option value="tsp(s)">tsp(s)</option>
-        <option value="tbsp(s)">tbsp(s)</option>
-        <option value="cup(s)">cup(s)</option>
-        <option value="fl oz">fl oz</option>
-        <option value="pint(s)">pint(s)</option>
-        <option value="gallon(s)">gallon(s)</option>
-        <option value="quart(s)">quart(s)</option>
-        <option value="lb(s)">lb(s)</option>
-        <option value="mL">mL</option>
-        <option value="L">L</option>
-        <option value="gram(s)">gram(s)</option>
-        <option value="kg">kg</option>
-    </select>
+
+    <div id="ingredients-container">
+        <div class="ingredient">
+            <label>Ingredient: </label>
+            <input type="text" name="ingredients[]">
+            <label>Measurement: </label>
+            <input type="number" name="measurementQty">
+            <select name="measurements[]">
+                <option value="tsp(s)">tsp(s)</option>
+                <option value="tbsp(s)">tbsp(s)</option>
+                <option value="cup(s)">cup(s)</option>
+                <option value="fl oz">fl oz</option>
+                <option value="pint(s)">pint(s)</option>
+                <option value="gallon(s)">gallon(s)</option>
+                <option value="quart(s)">quart(s)</option>
+                <option value="lb(s)">lb(s)</option>
+                <option value="mL">mL</option>
+                <option value="L">L</option>
+                <option value="gram(s)">gram(s)</option>
+                <option value="kg">kg</option>
+            </select>
+        </div>
+    </div>
+    <button type="button" id="add-ingredient">Add More Ingredients</button>
+    <label>Cooking Instructions:</label>
+    <input type="text" name="instructions">
     <label>Input Image URL: </label>
     <input type="text" name="recipeImg">
+    <button type="submit">Add Recipe</button>
 </form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const addIngredientButton = document.getElementById('add-ingredient');
+        const ingredientsContainer = document.getElementById('ingredients-container');
+
+        addIngredientButton.addEventListener('click', function () {
+            const ingredientDiv = document.createElement('div');
+            ingredientDiv.classList.add('ingredient');
+            ingredientDiv.innerHTML = `
+                <label>Ingredient: </label>
+                <input type="text" name="ingredients[]">
+                <label>Measurement: </label>
+                <input type="number" name="measurementQty">
+                <select name="measurements[]">
+                    <option value="tsp(s)">tsp(s)</option>
+                    <option value="tbsp(s)">tbsp(s)</option>
+                    <option value="cup(s)">cup(s)</option>
+                    <option value="fl oz">fl oz</option>
+                    <option value="pint(s)">pint(s)</option>
+                    <option value="gallon(s)">gallon(s)</option>
+                    <option value="quart(s)">quart(s)</option>
+                    <option value="lb(s)">lb(s)</option>
+                    <option value="mL">mL</option>
+                    <option value="L">L</option>
+                    <option value="gram(s)">gram(s)</option>
+                    <option value="kg">kg</option>
+                </select>
+            `;
+            ingredientsContainer.appendChild(ingredientDiv);
+        });
+    });
+</script>
 
 <%- include('../partials/footer') %>

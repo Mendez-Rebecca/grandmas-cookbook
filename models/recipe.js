@@ -26,7 +26,8 @@ const ratingsSchema = new Schema({
 const recipeSchema = new Schema({
     recipeName: { type: String, required: true},
     ratings: [ratingsSchema],
-    ingredients: [{ type: String }],
+    ingredients: String,
+    measurementQty: Number,
     measurements: String,
     recipeImg: String,
     instructions: String
