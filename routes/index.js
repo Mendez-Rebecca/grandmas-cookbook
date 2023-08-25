@@ -4,10 +4,9 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home Page' });
+  res.render('index', { title: `Flip the Cover of Grandma's Cookbook` });
 });
 
-// Google OAuth login route
 router.get('/auth/google', passport.authenticate(
   'google',
   {
