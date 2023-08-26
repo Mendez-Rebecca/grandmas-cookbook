@@ -11,6 +11,7 @@
     <nav>
         <a href="/recipes" <%- title === 'All Movies' ? 'class="active"' : '' %>>ALL RECIPES</a>
         <% if (user) { %>
+        <a href="/ingredients/new" <%- title === 'Add Ingredient' ? 'class="active"' : '' %>>ADD INGREDIENTS</a>
         <a href="/recipes/new" <%- title === 'Add New Recipe' ? 'class="active"' : '' %>>ADD RECIPE</a>
         <a href="/logout">LOG OUT</a>
         <% } else { %>

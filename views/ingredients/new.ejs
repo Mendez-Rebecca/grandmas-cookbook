@@ -2,8 +2,34 @@
 
 <section id="new-ingredient-container">
     <% ingredients.forEach(function(i) { %>
-        <article class="new-ingredient"><%= p.ingredientList %></article>
+        <article class="new-ingredient">
+            <%= i.measurementQty %>
+            <%= i.measurements %>
+            <%= i.ingredientList %>
+        </article>
     <% }); %>
 </section>
+
+<br><br>
+<form id="add-ingredient-form" action="/ingredients" method="POST">
+    <label>Ingredient: </label>
+    <input type="text" name="ingredientList">
+    <label>Measurement Amount: </label>
+        <input type="number" name="measurementQty">
+        <select name="measurements">
+            <option value="tsp(s)">tsp(s)</option>
+            <option value="tbsp(s)">tbsp(s)</option>
+            <option value="cup(s)">cup(s)</option>
+            <option value="fl oz">fl oz</option>
+            <option value="pint(s)">pint(s)</option>
+            <option value="gallon(s)">gallon(s)</option>
+            <option value="quart(s)">quart(s)</option>
+            <option value="lb(s)">lb(s)</option>
+            <option value="mL">mL</option>
+            <option value="L">L</option>
+            <option value="gram(s)">gram(s)</option>
+            <option value="kg">kg</option>
+        <input type="submit" value="Add Ingredient">
+</form>
 
 <%- include('../partials/footer') %>

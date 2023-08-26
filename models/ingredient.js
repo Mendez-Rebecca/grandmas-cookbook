@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const ingredientSchema = new Schema({
     ingredientList: {
         type: String,
-        require: true
+        require: true,
+        unique: true
     },
     measurementQty: Number,
     measurements: String

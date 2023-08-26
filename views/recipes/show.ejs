@@ -1,5 +1,14 @@
 <%- include('../partials/header') %>
 
+<form id="add-to-the-pot" action="/recipes/<%= recipe._id %>/ingredients" method="POST">
+    <select name="ingredientId">
+        <% recipe.ingredients.forEach(ingredient => { %>
+            <option value="<%= ingredient._id %>"><%= ingredient.ingredientList %></option>
+        <% }); %>
+    </select>
+    <button type="submit">Add to the Pot</button>
+</form>
+
 <section id="show-page">
     <div>Recipe Name: </div>
     <div><%= recipe.recipeName %></div>

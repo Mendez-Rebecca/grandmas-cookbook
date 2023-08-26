@@ -1,3 +1,4 @@
+const ingredient = require('../models/ingredient');
 const Recipe = require('../models/recipe');
 
 module.exports = {
@@ -14,6 +15,7 @@ async function index(req, res) {
 
 async function show(req, res) {
     const recipe = await Recipe.findById(req.params.id).populate('ingredients');
+    const ingredients = await ingredient.find({ _id: { $nin: recipe.ingredients} }).sort('ingredientList');
     res.render('recipes/show', { title: 'All Recipes', recipe });
 }
 
