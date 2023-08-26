@@ -4,5 +4,6 @@ const ratingsCtrl = require('../controllers/ratings');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 router.post('/recipes/:id/ratings', ensureLoggedIn, ratingsCtrl.create);
+router.delete('/ratings/:id', ensureLoggedIn, ratingsCtrl.delete)
 
 module.exports = router;

@@ -1,7 +1,8 @@
 const Recipe = require('../models/recipe');
 
 module.exports = {
-    create
+    create,
+    delete: deleteRating
 }
 
 async function create(req, res) {
@@ -18,5 +19,14 @@ async function create(req, res) {
     } catch(err) {
         console.log(err);
     }
+    res.redirect(`/recipes/${recipe._id}`);
+}
+
+async function deleteRating(req, res) {
+    const recipe = await Recipe.findOne({ 'ratings._id': req.params.id, 'ratings.user': req.user._id });
+
+    if (!recipe) return res.redirect('/recipes');
+    recipe.ratings.remove(req.params.id);
+    await recipe.save();
     res.redirect(`/recipes/${recipe._id}`);
 }
