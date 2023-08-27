@@ -13,7 +13,14 @@
     <div>Recipe Name: </div>
     <div><%= recipe.recipeName %></div>
     <div>Ingredients: </div>
-    <div><%= recipe.measurementQty %> <%= recipe.measurements %> <%= recipe.ingredients %></div>
+    <ul>
+        <% recipe.ingredients.forEach(ingredient => { %>
+            <li>
+                <%= ingredient.measurementQty %> <%= ingredient.measurements %>
+                <%= ingredient.ingredientList %>
+            </li>
+        <% }); %>
+    </ul>
     <div>Cooking Instructions: </div>
     <div><%= recipe.instructions %></div>
     <div>Image of Dish </div>
