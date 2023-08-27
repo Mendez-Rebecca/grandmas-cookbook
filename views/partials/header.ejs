@@ -12,7 +12,7 @@
         <a class="close-button" onclick="closeNav()">X</a>
         <br><br>
         <nav>
-            <a href="/recipes" <%- title === 'All Movies' ? 'class="active"' : '' %>>ALL RECIPES</a>
+            <a href="/recipes" <%- title === 'All Recipes' ? 'class="active"' : '' %>>ALL RECIPES</a>
             <% if (user) { %>
                 <br><br>
                 <a href="/recipes/new" <%- title === 'Add New Recipe' ? 'class="active"' : '' %>>ADD RECIPE</a>
@@ -28,7 +28,6 @@
         <span id="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
     </div>
     <div id="main-body">
-    <h1><%= title %></h1>
 
     <script>
         function closeNav() {

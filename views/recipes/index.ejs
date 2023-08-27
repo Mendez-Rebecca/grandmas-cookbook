@@ -1,32 +1,37 @@
 <%- include('../partials/header') %>
 
-<table>
-    <thead>
+<h2>All Recipes</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
         <tr>
             <th>Recipe</th>
             <th>Rating</th>
             <th>Recipe Card</th>
         </tr>
-    </thead>
-    <tbody>
-        <% recipes.forEach(function(r) { %>
-            <tr>
-                <td><%= r.recipeName %></td>
-                <td>
-                    <% if (r.ratings.length > 0) { %>
-                        <% let totalRating = 0; %>
-                        <% r.ratings.forEach(function(rating) { %>
-                            <% totalRating += rating.rating; %>
-                        <% }); %>
-                        <%= (totalRating / r.ratings.length).toFixed(1) %>
-                    <% } else { %>
-                        No Ratings
-                    <% } %>
-                </td>
-                <td><a href="/recipes/<%= r._id %>">View Card</a></td>
-            </tr>
-        <% }); %>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        <tr>
+            <% recipes.forEach(function(r) { %>
+                <tr>
+                    <td><%= r.recipeName %></td>
+                    <td>
+                        <% if (r.ratings.length > 0) { %>
+                            <% let totalRating = 0; %>
+                            <% r.ratings.forEach(function(rating) { %>
+                                <% totalRating += rating.rating; %>
+                            <% }); %>
+                            <%= (totalRating / r.ratings.length).toFixed(1) %>
+                        <% } else { %>
+                            No Ratings
+                        <% } %>
+                    </td>
+                    <td><a href="/recipes/<%= r._id %>">View Card</a></td>
+                </tr>
+            <% }); %>
+        </tr>
+        <tbody>
+    </table>
+</div>
 
 <%- include('../partials/footer') %>
