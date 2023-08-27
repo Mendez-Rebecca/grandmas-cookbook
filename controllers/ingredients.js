@@ -1,4 +1,4 @@
-const ingredient = require('../models/ingredient');
+const Ingredient = require('../models/ingredient');
 const Recipe = require('../models/recipe');
 
 module.exports = {
@@ -8,13 +8,13 @@ module.exports = {
 }
 
 async function newIngredient(req, res) {
-    const ingredients = await ingredient.find({}).sort('ingredientList');
+    const ingredients = await Ingredient.find({}).sort('ingredientList');
     res.render('ingredients/new', { title: 'Add Ingredient', ingredients});
 }
 
 async function create(req, res) {
     try {
-        await ingredient.create(req.body);
+        await Ingredient.create(req.body);
     } catch(err){
         console.log(err)
     }
@@ -22,10 +22,8 @@ async function create(req, res) {
 }
 
 async function addToPot(req, res) {
-    try {
-        const recipe = await Recipe.findById(req.params.id).populate('ingredients');
-        res.render('recipes/addToPot', { recipe });
-    } catch (err) {
-        console.error(err);
-    }
+    const recipe = await Recipe.findById(req.params.id);
+    recipe.ingredients.push(req.body.ingredientId);
+    await recipe.save();
+    res.redirect(`/recipes/${recipe._id}`);
 }
