@@ -59,3 +59,8 @@ span {
   transition: margin-left .5s;
   margin-left: 250px;
 }
+
+.grandmas-cookbook {
+  display: block;
+  text-align: center;
+}
