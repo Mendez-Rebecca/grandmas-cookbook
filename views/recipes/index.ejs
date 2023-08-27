@@ -4,9 +4,7 @@
     <thead>
         <tr>
             <th>Recipe</th>
-            <th>Ingredients</th>
-            <th>Amount</th>
-            <th>Average Rating</th>
+            <th>Rating</th>
             <th>Recipe Card</th>
         </tr>
     </thead>
@@ -14,8 +12,6 @@
         <% recipes.forEach(function(r) { %>
             <tr>
                 <td><%= r.recipeName %></td>
-                <td><%= r.ingredients %></td>
-                <td><%= r.measurementQty %> <%= r.measurements %></td>
                 <td>
                     <% if (r.ratings.length > 0) { %>
                         <% let totalRating = 0; %>
