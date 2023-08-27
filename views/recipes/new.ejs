@@ -1,16 +1,20 @@
 <%- include('../partials/header') %>
 
-<form id="new-form" action="/recipes" method="POST">
-    <label>Recipe Name: </label>
-    <input type="text" name="recipeName">
-
-    <div id="ingredients-container">
-        <label>Input Image URL: </label>
-        <input type="text" name="recipeImg">
+<div class="new-form-container">
+    <div class="new-form">
+        <form id="new-form" class="form" action="/recipes" method="POST">
+            <label class="form-label">Recipe Name: </label>
+            <input class="form-input" type="text" name="recipeName">
+            <div id="ingredients-container">
+                <label class="form-label">Input Image URL: </label>
+                <input class="form-input" type="text" name="recipeImg">
+            </div>
+                <textarea class="form-textarea" name="instructions"
+                placeholder="Enter cooking instructions here" form="new-form"
+                cols="50" rows="10"></textarea>
+                <button class="new-form-button" type="submit">Add Recipe</button>
+        </form>
     </div>
-        <textarea name="instructions" form="new-form"
-        cols="30" rows="10">Enter cooking instructions here</textarea>
-        <button type="submit">Add Recipe</button>
-</form>
+</div>
 
 <%- include('../partials/footer') %>
