@@ -1,17 +1,20 @@
 <%- include('../partials/header') %>
 
-<form id="add-to-the-pot" action="/recipes/<%= recipe._id %>/ingredients" method="POST">
-    <select name="ingredientId">
-        <% ingredients.map(ingredient => { %>
-            <option value="<%= ingredient._id %>"><%= ingredient.ingredientList %></option>
-        <% }); %>
-    </select>
-    <button type="submit">Add to the Pot</button>
+<div class=".new-form">
+    <form id="add-to-the-pot" action="/recipes/<%= recipe._id %>/ingredients" method="POST">
+        <select class="selector" name="ingredientId">
+            <% ingredients.map(ingredient => { %>
+                <option value="<%= ingredient._id %>"><%= ingredient.ingredientList %></option>
+            <% }); %>
+        </select>
+    <button class="add-button" type="submit">Add to the Pot</button>
 </form>
+</div>
 
+<div class="add-container">
 <section id="show-page">
-    <div>Recipe Name: </div>
-    <div><%= recipe.recipeName %></div>
+    <div>Recipe Name: <%= recipe.recipeName %></div>
+    <br><br>
     <div>Ingredients: </div>
     <ul>
         <% recipe.ingredients.forEach(ingredient => { %>
@@ -21,65 +24,84 @@
             </li>
         <% }); %>
     </ul>
+    <br>
     <div>Cooking Instructions: </div>
-    <div><%= recipe.instructions %></div>
+    <ul>
+        <%= recipe.instructions %>
+    </ul>
+    <br>
     <div>Image of Dish </div>
     <div><%= recipe.recipeImg %></div>
 </section>
+</div>
 
-<br><br><h2>Ratings</h2>
-<form id="add-rating" method="POST"
-    action="/recipes/<%= recipe._id %>/ratings">
-    <label>Ratings: </label>
-    <textarea name="content"></textarea>
-    <label>Rate This Dish</label>
-    <select name="rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5" selected>5</option>
-    </select>
-    <input type="submit" value="Add Rating">
-</form>
+<br>
+<h2 class="h2-rating">Ratings</h2>
+<div class="ratings-container">
+    <div class="ratings-form">
+        <form id="add-rating" class="rate-form" method="POST"
+            action="/recipes/<%= recipe._id %>/ratings">
+            <label class="form-label">Leave Comments Below </label>
+            <textarea class="ratings-textarea" name="content"></textarea>
+            <label class="form-label">Rate This Dish</label>
+            <br>
+            <select class="rating-selector" name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected>5</option>
+        </select>
+        <input class="rating-button" type="submit" value="Add Rating">
+    </form>
+    </div>
+</div>
 
-<br><br>
-<% if (recipe.ratings.length) { %>
-    <table>
-        <thead>
-            <tr>
-                <th>User</th>
-                <th>Date</th>
-                <th>Review</th>
-                <th>Rating</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% let avg = 0 %>
-            <% recipe.ratings.forEach(function(r) { %>
-                <% avg += r.rating %>
+<br><br><br>
+<div class="ratings-wrapper">
+    <% if (recipe.ratings.length) { %>
+        <table class="fl-table">
+            <thead>
                 <tr>
-                    <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer"><%= r.userName %></td>
-                    <td><%= r.createdAt.toLocaleDateString()  %></td>
-                    <td><%= r.content %></td>
-                    <td><%= r.rating %></td>
-                    <td>
-                        <% if (user?._id.equals(r.user)) { %>
-                            <form action="/ratings/<%= r._id %>?_method=DELETE" method="POST">
-                                <button type="submit">Χ</button>
-                            </form>
-                        <% } %>
-                    </td>
+                    <th>User</th>
+                    <th>Date</th>
+                    <th>Review</th>
+                    <th>Rating</th>
+                    <th>Delete</th>
                 </tr>
-            <% }); %>
-            <tr>
-                <td><%= (avg / recipe.ratings.length).toFixed(1) %></td>
-            </tr>
-        </tbody>
-    </table>
-<% } else { %>
-    <h5>No Reviews Yet</h5>
-<% } %>
+            </thead>
+            <tbody>
+                <% let avg = 0 %>
+                <% recipe.ratings.forEach(function(r) { %>
+                    <% avg += r.rating %>
+                    <tr>
+                        <td class="review-user">
+                            <div class="user-info">
+                                <img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer">
+                                <div class="user-name"><%= r.userName %></div>
+                            </div>
+                        </td>
+                        <td><%= r.createdAt.toLocaleDateString()  %></td>
+                        <td><%= r.content %></td>
+                        <td><%= r.rating %></td>
+                        <td>
+                            <% if (user?._id.equals(r.user)) { %>
+                                <form action="/ratings/<%= r._id %>?_method=DELETE" method="POST">
+                                    <button type="submit">Χ</button>
+                                </form>
+                            <% } %>
+                        </td>
+                    </tr>
+                    <% }); %>
+                    <tr>
+                        <td>Average Rating: <%= (avg / recipe.ratings.length).toFixed(1) %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <% } else { %>
+        <h4 class="no-reviews">No Reviews Yet</h5>
+    <% } %>
 
 
 <%- include('../partials/footer') %>
