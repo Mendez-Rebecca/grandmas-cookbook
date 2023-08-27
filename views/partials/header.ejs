@@ -8,17 +8,41 @@
     <title><%= title %></title>
 </head>
 <body>
-    <div class="sidebar">
-    <nav>
-        <a href="/recipes" <%- title === 'All Movies' ? 'class="active"' : '' %>>ALL RECIPES</a>
-        <% if (user) { %>
-            <a href="/recipes/new" <%- title === 'Add New Recipe' ? 'class="active"' : '' %>>ADD RECIPE</a>
-            <a href="/ingredients/new" <%- title === 'Add Ingredient' ? 'class="active"' : '' %>>ADD INGREDIENTS</a>
-            <a href="/logout">LOG OUT</a>
-        <% } else { %>
-            <a href="/auth/google" class="login">LOGIN</a>
-        <% } %>
-    </nav>
+    <div id="sideNav" class="sidebar">
+        <a class="close-button" onclick="closeNav()">X</a>
+        <br><br>
+        <nav>
+            <a href="/recipes" <%- title === 'All Movies' ? 'class="active"' : '' %>>ALL RECIPES</a>
+            <% if (user) { %>
+                <br><br>
+                <a href="/recipes/new" <%- title === 'Add New Recipe' ? 'class="active"' : '' %>>ADD RECIPE</a>
+                <br><br>
+                <a href="/ingredients/new" <%- title === 'Add Ingredient' ? 'class="active"' : '' %>>ADD INGREDIENTS</a>
+                <br><br>
+                <a href="/logout">LOG OUT</a>
+                <% } else { %>
+                    <br><br>
+                    <a href="/auth/google" class="login">LOGIN</a>
+                    <% } %>
+        </nav>
+        <span id="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
     </div>
-    <main>
+    <div id="main-body">
     <h1><%= title %></h1>
+
+    <script>
+        function closeNav() {
+            document.getElementById('sideNav').style.width = '0';
+            document.getElementById('main-body').style.marginLeft = '0';
+            const timer = setInterval(function() {
+                document.getElementById('hamburger').style.visibility = 'visible';
+                clearInterval(timer);
+            }, 300);
+        }
+
+        function openNav() {
+            document.getElementById('sideNav').style.width = '250px';
+            document.getElementById('main-body').style.marginLeft = '250px';
+            document.getElementById('hamburger').style.visibility = 'hidden';
+        }
+    </script>

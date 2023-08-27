@@ -9,9 +9,18 @@ a {
   color: white;
 }
 
+.sidebar .close-button {
+  position: absolute;
+  top: 0;
+  right: 1px;
+  font-size: 36px;
+}
+
+.sidebar .close-button:hover {
+  cursor: pointer;
+}
+
 .sidebar {
-  display: flex;
-  justify-content: center;
   height: 100%;
   width: 250px;
   position: fixed;
@@ -22,4 +31,31 @@ a {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  margin-right: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+span {
+  visibility: hidden;
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  color: white;
+  z-index: 2;
+}
+
+#main-body {
+  transition: margin-left .5s;
+  margin-left: 250px;
 }
