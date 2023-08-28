@@ -431,3 +431,7 @@ span {
 .dish-image {
   margin-left: 30px;
 }
+
+.theme-button:hover {
+  cursor: pointer;
+}
