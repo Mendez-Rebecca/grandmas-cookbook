@@ -1,4 +1,4 @@
-.orange {
+body {
   background-color: #37200b;
   color: white;
   padding: 50px;
@@ -152,7 +152,7 @@ span {
   border-radius: 5px;
   margin: 0.625rem auto;
   transition: all 250ms;
-  background-color:#619daa;
+  background-color:#8d4e13;
   color: white;
 }
 
@@ -160,7 +160,7 @@ span {
   font-size: 1rem;
   color: white;
   display: block;
-  background-color: #619daa;
+  background-color: #8d4e13;
   border: 1px solid black;
   border-radius: 10px;
   margin: 0.625rem auto;
@@ -191,7 +191,7 @@ span {
   border-radius: 5px;
   margin: 0.625rem auto;
   transition: all 250ms;
-  background-color:#619daa;
+  background-color:#8d4e13;
   color: white;
   margin-left: 140px;
 }
@@ -236,7 +236,7 @@ span {
   justify-content: center;
   align-items: center;
   padding: 2rem 2rem 1.5rem;
-  background-color: #44434C;
+  background-color: #c53939;
   border-radius: 20px;
   margin-left: 120px;
 }
@@ -254,7 +254,7 @@ span {
   font-size: 1rem;
   color: white;
   display: block;
-  background-color: #8A8896;
+  background-color: #ff6149;
   border: 1px solid black;
   border-radius: 10px;
   margin: 0.625rem auto;
@@ -275,7 +275,7 @@ span {
   border-radius: 5px;
   margin: 0.625rem auto;
   transition: all 250ms;
-  background-color:#8A8896;
+  background-color:#ff6149;
   color: white;
   margin-left: 10px;
 }
@@ -285,12 +285,12 @@ span {
   padding: 10px;
   font-size: 14px;
   border-radius: 10px;
-  color:#44434C;
+  color:#c53939;
   margin-left: 10px;
 }
 
 .rating-button:hover {
-  background-color: #3B3A41;
+  background-color: #922a2a;
   color: white;
   box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
   -webkit-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
@@ -356,7 +356,7 @@ span {
   justify-content: center;
   align-items: center;
   padding: 2rem 2rem 1.5rem;
-  background-color: #44434C;
+  background-color: #c53939;
   border-radius: 20px;
 }
 
@@ -383,7 +383,7 @@ span {
   border-radius: 5px;
   margin: 0.625rem auto;
   transition: all 250ms;
-  background-color:#8A8896;
+  background-color:#ff6149;
   color: white;
 }
 
@@ -395,7 +395,7 @@ span {
   border-radius: 5px;
   margin: 0.625rem auto;
   transition: all 250ms;
-  background-color:#8A8896;
+  background-color:#ff6149;
   color: white;
 }
 
@@ -416,12 +416,12 @@ span {
   padding: 10px;
   font-size: 14px;
   border-radius: 10px;
-  color:#44434C;
+  color:#c53939;
   margin-left: 10px;
 }
 
 .ingredient-btn:hover {
-  background-color: #3B3A41;
+  background-color: #922a2a;
   color: white;
   box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
   -webkit-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
@@ -502,7 +502,7 @@ span {
   border-radius: 5px;
   margin: 0.625rem auto;
   transition: all 250ms;
-  background-color:#619daa;
+  background-color:#4b7a84;
   color: white;
 }
 
@@ -510,7 +510,7 @@ span {
   font-size: 1rem;
   color: white;
   display: block;
-  background-color: #619daa;
+  background-color: #4b7a84;
   border: 1px solid black;
   border-radius: 10px;
   margin: 0.625rem auto;
@@ -541,7 +541,7 @@ span {
   border-radius: 5px;
   margin: 0.625rem auto;
   transition: all 250ms;
-  background-color:#619daa;
+  background-color:#4b7a84;
   color: white;
   margin-left: 140px;
 }
@@ -622,12 +622,12 @@ span {
   padding: 10px;
   font-size: 14px;
   border-radius: 10px;
-  color:#44434C;
+  color:#8A8896;
   margin-left: 10px;
 }
 
 .blue .rating-button:hover {
-  background-color: #3B3A41;
+  background-color: #161618;
   color: white;
   box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
   -webkit-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
@@ -702,12 +702,12 @@ span {
   padding: 10px;
   font-size: 14px;
   border-radius: 10px;
-  color:#8A8896;
+  color:#44434C;
   margin-left: 10px;
 }
 
 .blue .ingredient-btn:hover {
-  background-color: #3B3A41;
+  background-color: #161618;
   color: white;
   box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
   -webkit-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
