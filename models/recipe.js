@@ -30,8 +30,6 @@ const recipeSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Ingredient'
     }],
-    measurementQty: Number,
-    measurements: String,
     recipeImg: String,
     instructions: String
 });
