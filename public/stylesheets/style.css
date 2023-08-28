@@ -65,13 +65,13 @@ span {
   text-align: center;
 }
 
-h2{
+.h2-all-recipes {
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: white;
   padding: 30px 0;
-  margin-left: 160px;
+  margin-left: 210px;
 }
 
 .table-wrapper{
@@ -327,4 +327,107 @@ h2{
   box-shadow: none;
   margin-left: 30px;
   margin-right: 30px;
+}
+
+.h2-avail {
+  margin-left: 170px;
+}
+
+.ingredient-container {
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem 1.5rem;
+  background-color: #86892a;
+  border-radius: 20px;
+  margin-left: 50px;
+}
+
+.add-ingredient-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem 1.5rem;
+  background-color: #c53939;
+  border-radius: 20px;
+}
+
+.add-form {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.add-ingredient-form {
+  align-self: center;
+}
+
+.ingredient-label {
+  font-size: 1rem;
+  color: white;
+  display: block;
+}
+
+.ingredient-input {
+  width: clamp(120px, 50vw, 420px);
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+  background-color:#ff6149;
+  color: white;
+}
+
+.ingredient-measure {
+  width: clamp(120px, 50vw, 300px);
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+  background-color:#ff6149;
+  color: white;
+}
+
+.ingredient-select {
+  width: clamp(75px, 50vw, 120px);
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+  background-color:#ff6149;
+  color: white;
+}
+
+.ingredient-btn {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  color:#c53939;
+  margin-left: 10px;
+}
+
+.ingredient-btn:hover {
+  background-color: #922a2a;
+  color: white;
+  box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+  -webkit-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+  -moz-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+}
+
+.dish-image {
+  margin-left: 30px;
 }

@@ -1,35 +1,41 @@
 <%- include('../partials/header') %>
 
-<section id="new-ingredient-container">
+<h2 class="h2-avail">Available Ingredients</h2>
+<section id="new-ingredient-container" class="ingredient-container">
+    <ul>
     <% ingredients.forEach(function(i) { %>
         <article class="new-ingredient">
-            <%= i.measurementQty %>
-            <%= i.measurements %>
-            <%= i.ingredientList %>
+            <li><%= i.measurementQty %> <%= i.measurements %> <%= i.ingredientList %></li>
         </article>
     <% }); %>
+    </ul>
 </section>
 
 <br><br>
-<form id="add-ingredient-form" action="/ingredients" method="POST">
-    <label>Ingredient: </label>
-    <input type="text" name="ingredientList">
-    <label>Measurement Amount: </label>
-        <input type="number" name="measurementQty">
-        <select name="measurements">
-            <option value="tsp(s)">tsp(s)</option>
-            <option value="tbsp(s)">tbsp(s)</option>
-            <option value="cup(s)">cup(s)</option>
-            <option value="fl oz">fl oz</option>
-            <option value="pint(s)">pint(s)</option>
-            <option value="gallon(s)">gallon(s)</option>
-            <option value="quart(s)">quart(s)</option>
-            <option value="lb(s)">lb(s)</option>
-            <option value="mL">mL</option>
-            <option value="L">L</option>
-            <option value="gram(s)">gram(s)</option>
-            <option value="kg">kg</option>
-        <input type="submit" value="Add Ingredient">
-</form>
+<div class="add-ingredient-container">
+    <div class="add-form">
+    <form id="add-ingredient-form" class="add-ingredient-form" action="/ingredients" method="POST">
+        <label class="ingredient-label">Ingredient: </label>
+        <input class="ingredient-input" type="text" name="ingredientList">
+        <label class="ingredient-label">Measurement Amount: </label>
+            <input class="ingredient-measure" type="number" name="measurementQty">
+            <select class="ingredient-select" name="measurements">
+                <option value="tsp(s)">tsp(s)</option>
+                <option value="tbsp(s)">tbsp(s)</option>
+                <option value="cup(s)">cup(s)</option>
+                <option value="fl oz">fl oz</option>
+                <option value="ounce(s)">ounce(s)</option>
+                <option value="pint(s)">pint(s)</option>
+                <option value="gallon(s)">gallon(s)</option>
+                <option value="quart(s)">quart(s)</option>
+                <option value="lb(s)">lb(s)</option>
+                <option value="mL">mL</option>
+                <option value="L">L</option>
+                <option value="gram(s)">gram(s)</option>
+                <option value="kg">kg</option>
+            <input class="ingredient-btn" type="submit" value="Add Ingredient">
+    </form>
+    </div>
+</div>
 
 <%- include('../partials/footer') %>
