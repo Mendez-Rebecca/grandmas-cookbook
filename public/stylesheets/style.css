@@ -1,4 +1,4 @@
-body {
+.orange {
   background-color: #37200b;
   color: white;
   padding: 50px;
@@ -152,7 +152,7 @@ span {
   border-radius: 5px;
   margin: 0.625rem auto;
   transition: all 250ms;
-  background-color:#8d4e13;
+  background-color:#619daa;
   color: white;
 }
 
@@ -160,7 +160,7 @@ span {
   font-size: 1rem;
   color: white;
   display: block;
-  background-color: #8d4e13;
+  background-color: #619daa;
   border: 1px solid black;
   border-radius: 10px;
   margin: 0.625rem auto;
@@ -191,7 +191,7 @@ span {
   border-radius: 5px;
   margin: 0.625rem auto;
   transition: all 250ms;
-  background-color:#8d4e13;
+  background-color:#619daa;
   color: white;
   margin-left: 140px;
 }
@@ -236,7 +236,7 @@ span {
   justify-content: center;
   align-items: center;
   padding: 2rem 2rem 1.5rem;
-  background-color: #c53939;
+  background-color: #44434C;
   border-radius: 20px;
   margin-left: 120px;
 }
@@ -254,7 +254,7 @@ span {
   font-size: 1rem;
   color: white;
   display: block;
-  background-color: #ff6149;
+  background-color: #8A8896;
   border: 1px solid black;
   border-radius: 10px;
   margin: 0.625rem auto;
@@ -275,7 +275,7 @@ span {
   border-radius: 5px;
   margin: 0.625rem auto;
   transition: all 250ms;
-  background-color:#ff6149;
+  background-color:#8A8896;
   color: white;
   margin-left: 10px;
 }
@@ -285,12 +285,12 @@ span {
   padding: 10px;
   font-size: 14px;
   border-radius: 10px;
-  color:#c53939;
+  color:#44434C;
   margin-left: 10px;
 }
 
 .rating-button:hover {
-  background-color: #922a2a;
+  background-color: #3B3A41;
   color: white;
   box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
   -webkit-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
@@ -356,7 +356,7 @@ span {
   justify-content: center;
   align-items: center;
   padding: 2rem 2rem 1.5rem;
-  background-color: #c53939;
+  background-color: #44434C;
   border-radius: 20px;
 }
 
@@ -383,7 +383,7 @@ span {
   border-radius: 5px;
   margin: 0.625rem auto;
   transition: all 250ms;
-  background-color:#ff6149;
+  background-color:#8A8896;
   color: white;
 }
 
@@ -395,7 +395,7 @@ span {
   border-radius: 5px;
   margin: 0.625rem auto;
   transition: all 250ms;
-  background-color:#ff6149;
+  background-color:#8A8896;
   color: white;
 }
 
@@ -416,12 +416,12 @@ span {
   padding: 10px;
   font-size: 14px;
   border-radius: 10px;
-  color:#c53939;
+  color:#44434C;
   margin-left: 10px;
 }
 
 .ingredient-btn:hover {
-  background-color: #922a2a;
+  background-color: #3B3A41;
   color: white;
   box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
   -webkit-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
@@ -434,4 +434,282 @@ span {
 
 .theme-button:hover {
   cursor: pointer;
+}
+
+.orange-theme:hover {
+  cursor: pointer;
+}
+
+.blue-theme:hover {
+  cursor: pointer;
+}
+
+.green-theme:hover {
+  cursor: pointer;
+}
+
+.blue {
+  background-color: #1C2F4A;
+  color: white;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.blue .sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #639FAB;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.blue .fl-table thead th {
+  color: #ffffff;
+  background: #0f355a;
+}
+
+.blue .fl-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #639FAB;
+}
+
+.blue .fl-table tr:nth-child(even) {
+  background: #02070d;
+}
+
+.blue .new-form-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem 1.5rem;
+  background-color: #36575e;
+  border-radius: 20px;
+}
+
+.blue .form-input {
+  width: clamp(120px, 50vw, 420px);
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+  background-color:#619daa;
+  color: white;
+}
+
+.blue .form-textarea {
+  font-size: 1rem;
+  color: white;
+  display: block;
+  background-color: #619daa;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+}
+
+.blue .new-form-button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  color:#639FAB;
+}
+
+.blue .new-form-button:hover {
+  background-color: #639FAB;
+  color: white;
+  box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+  -webkit-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+  -moz-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+}
+
+.blue .selector {
+  width: clamp(120px, 50vw, 150px);
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+  background-color:#619daa;
+  color: white;
+  margin-left: 140px;
+}
+
+.blue .add-button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  color:#639FAB;
+  margin-left: 10px;
+}
+
+.blue .add-button:hover {
+  background-color: #639FAB;
+  color: white;
+  box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+  -webkit-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+  -moz-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+}
+
+.blue .add-container {
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem 1.5rem;
+  background-color: #36575e;
+  border-radius: 20px;
+  margin-left: 160px;
+}
+
+.blue .ratings-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem 1.5rem;
+  background-color: #44434C;
+  border-radius: 20px;
+  margin-left: 120px;
+}
+
+.blue .ratings-textarea {
+  font-size: 1rem;
+  color: white;
+  display: block;
+  background-color: #8A8896;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+  height: 150px;
+  width: 400px;
+}
+
+.blue .rating-selector {
+  width: clamp(70px, 50vw, 50px);
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+  background-color:#8A8896;
+  color: white;
+  margin-left: 10px;
+}
+
+.blue .rating-button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  color:#44434C;
+  margin-left: 10px;
+}
+
+.blue .rating-button:hover {
+  background-color: #3B3A41;
+  color: white;
+  box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+  -webkit-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+  -moz-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+}
+
+.blue .ingredient-container {
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem 1.5rem;
+  background-color: #36575e;
+  border-radius: 20px;
+  margin-left: 50px;
+}
+
+.blue .add-ingredient-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem 1.5rem;
+  background-color: #44434C;
+  border-radius: 20px;
+}
+
+.blue .ingredient-input {
+  width: clamp(120px, 50vw, 420px);
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+  background-color:#8A8896;
+  color: white;
+}
+
+.blue .ingredient-measure {
+  width: clamp(120px, 50vw, 300px);
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+  background-color:#8A8896;
+  color: white;
+}
+
+.blue .ingredient-select {
+  width: clamp(75px, 50vw, 120px);
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+  background-color:#8A8896;
+  color: white;
+}
+
+.blue .ingredient-btn {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  color:#8A8896;
+  margin-left: 10px;
+}
+
+.blue .ingredient-btn:hover {
+  background-color: #3B3A41;
+  color: white;
+  box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+  -webkit-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
+  -moz-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
 }
