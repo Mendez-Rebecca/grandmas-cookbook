@@ -985,3 +985,14 @@ span {
   max-width: 600px;
   overflow: hidden;
 }
+
+.theme-button .arrow {
+  max-height:20px;
+  max-width: 20px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.theme-button.expanded .arrow.rotate {
+  transform: rotate(-90deg);
+}

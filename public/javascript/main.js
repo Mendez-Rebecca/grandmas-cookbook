@@ -20,9 +20,11 @@ let isExpanded = false;
 function themeDropdown() {
     const themeButton = document.getElementById('theme-button');
     const themeLinksContainer = document.getElementById('theme-links-container');
+    const arrowImg = themeButton.querySelector('.arrow');
 
     if (!isExpanded) {
-        themeButton.innerHTML = "THEMES v";
+        themeButton.classList.add('expanded');
+        arrowImg.classList.add('rotate');
 
         const blueThemeLink = document.createElement('a');
         blueThemeLink.id = "blue-theme";
@@ -52,7 +54,8 @@ function themeDropdown() {
         themeLinksContainer.appendChild(document.createElement('br'));
         themeLinksContainer.appendChild(document.createElement('br'));
     } else {
-        themeButton.innerHTML = "THEMES >";
+        themeButton.classList.remove('expanded');
+        arrowImg.classList.remove('rotate');
         themeLinksContainer.innerHTML = '';
     }
     isExpanded = !isExpanded;
