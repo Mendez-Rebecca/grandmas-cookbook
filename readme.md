@@ -8,6 +8,8 @@ The deployed web application can be found [here].
 
 [Figma](https://www.figma.com) was used to create the initial draft for the layout and styling of the website.
 
+Any images used in this project were created in [Canva](https://www.canva.com) and edited with Photoshop.
+
 <img src=https://i.imgur.com/AlnP3Ya.png width=650px height=500px>
 <br>
 <br>
@@ -42,3 +44,5 @@ Added UI for a user to change the theme of the web application.
 - Provide users with the ability to delete items from the ingredients list.
 
 - Allow users to delete entire recipe cards.
+
+- Add a section for users to favorite their recipes.

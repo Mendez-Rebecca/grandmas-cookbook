@@ -979,3 +979,9 @@ span {
   -webkit-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
   -moz-box-shadow: 6px 3px 18px -3px rgba(0,0,0,0.71);
 }
+
+.home-page-img {
+  max-height:700px;
+  max-width: 600px;
+  overflow: hidden;
+}
