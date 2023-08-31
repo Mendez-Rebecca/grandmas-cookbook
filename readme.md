@@ -33,6 +33,22 @@ Added UI for a user to change the theme of the web application.
 
 <img src=https://i.imgur.com/5qKIne0.png width=700 height=550>
 
+## Languages
+
+- HTML
+
+- CSS
+
+- JavaScipt
+
+- Node.js
+
+- Express.js
+
+- MongoDB
+
+- Mongoose
+
 ## Notable Features
 
 - Ability to hide and unhide the nav bar.
